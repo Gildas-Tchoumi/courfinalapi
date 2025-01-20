@@ -39,6 +39,7 @@ class PostController extends Controller
             if($request->hasFile('image')) {
                 $image = $request->file('image')->store('public/posts');
             }
+            
             // create new post
             $post = Post::create([
                 'title' => $request->title,
